@@ -1,7 +1,7 @@
 "use client";
-import { Card } from "~/components/ui/card";
+import { Card } from "~/layers/shared/components/ui/card";
 import { LoginFormHeader } from "~/layers/features/login-form-header/facade";
-import { useGetJsonSchemaQuery } from "~/layers/hooks/use-get-json-schema/facade";
+import { useGetJsonSchemaQuery } from "~/layers/shared/hooks/use-get-json-schema/facade";
 import { RHFJsonComponent } from "~/layers/shared/components/json-schema-form/facade";
 
 export const LoginForm: React.FC = () => {

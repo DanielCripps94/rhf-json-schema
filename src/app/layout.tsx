@@ -10,7 +10,7 @@ import {
   GET_JSON_SCHEMA,
   getJsonSchema,
 } from "~/app/api/get-schema/get-json-schema";
-import Providers from "~/layers/providers/query-client-provider";
+import Providers from "~/layers/entities/providers/query-client-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

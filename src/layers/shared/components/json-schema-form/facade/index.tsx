@@ -8,9 +8,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "~/components/ui/form";
-import { Input } from "~/components/ui/input";
-import { useZodSchema } from "~/layers/hooks/use-get-validation";
+} from "~/layers/shared/components/ui/form";
+import { Input } from "~/layers/shared/components/ui/input";
+import { useZodSchema } from "~/layers/shared/hooks/use-get-validation";
 import { Field, JsonSchema } from "~/app/api/get-schema/get-json-schema";
 
 interface RHFJsonComponentProps {
@@ -61,10 +61,7 @@ export const RHFJsonComponent: React.FC<RHFJsonComponentProps> = ({
                 render={({ field }) => {
                   return (
                     <FormItem className="flex flex-col space-y-1.5 w-full">
-                      <FormLabel
-                        className="text-gray-300"
-                        htmlFor={fieldValue.title}
-                      >
+                      <FormLabel className="text-gray-300">
                         {fieldValue.title}
                       </FormLabel>
                       <Input

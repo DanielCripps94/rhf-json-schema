@@ -1,4 +1,4 @@
-import { CardHeader, CardTitle } from "~/components/ui/card";
+import { CardHeader, CardTitle } from "~/layers/shared/components/ui/card";
 
 interface LoginFormHeaderProps {
   text: string;
