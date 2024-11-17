@@ -15,7 +15,7 @@ const createZodSchemaFromJSON = (jsonSchema: JsonSchema) => {
     [FieldType.STRING]: stringSchema,
     [FieldType.NUMBER]: numberSchema,
     [FieldType.BOOLEAN]: booleanSchema,
-  };
+  }; // extend as much as we want
 
   jsonSchema.fields.forEach((field) => {
     const schemaBuilder = validationMapping[field.type];

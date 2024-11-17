@@ -1,28 +1,14 @@
-import {
-  dehydrate,
-  HydrationBoundary,
-  QueryClient,
-} from "@tanstack/react-query";
+import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import {
   GET_JSON_SCHEMA,
   getJsonSchema,
 } from "~/app/api/get-schema/get-json-schema";
 import { Suspense } from "react";
 import { LoginForm } from "~/layers/widgets/form-widget";
+import { useQueryClient } from "~/layers/shared/hooks/use-query-client/facade";
 
 export default async function Home() {
-  const queryClient = new QueryClient({
-    defaultOptions: {
-      queries: {
-        staleTime: 60 * 1000,
-        retry: 0,
-        refetchOnWindowFocus: false,
-        refetchOnMount: false,
-        retryOnMount: false,
-        refetchIntervalInBackground: false,
-      },
-    },
-  });
+  const queryClient = useQueryClient();
   await queryClient.prefetchQuery({
     queryKey: [GET_JSON_SCHEMA],
     queryFn: () => getJsonSchema(),
