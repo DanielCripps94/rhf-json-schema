@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// need to type actual api response
 export const transformSchema = (schema: any) => {
   const {
     properties,

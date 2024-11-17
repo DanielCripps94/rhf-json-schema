@@ -5,10 +5,10 @@ import {
 } from "~/app/api/get-schema/get-json-schema";
 import { Suspense } from "react";
 import { LoginForm } from "~/layers/widgets/form-widget";
-import { useQueryClient } from "~/layers/shared/hooks/use-query-client/facade";
+import { createQueryClient } from "~/layers/shared/hooks/use-query-client/facade";
 
 export default async function Home() {
-  const queryClient = useQueryClient();
+  const queryClient = await createQueryClient();
   await queryClient.prefetchQuery({
     queryKey: [GET_JSON_SCHEMA],
     queryFn: () => getJsonSchema(),

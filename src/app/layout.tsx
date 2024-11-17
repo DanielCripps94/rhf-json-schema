@@ -1,15 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import {
-  dehydrate,
-  HydrationBoundary,
-  QueryClient,
-} from "@tanstack/react-query";
-import {
-  GET_JSON_SCHEMA,
-  getJsonSchema,
-} from "~/app/api/get-schema/get-json-schema";
 import Providers from "~/layers/entities/providers/query-client-provider";
 
 const geistSans = localFont({

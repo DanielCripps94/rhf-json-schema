@@ -15,7 +15,7 @@ interface FieldProps {
   fieldValue: Field;
 }
 
-export const useUIMapper = ({ field, fieldValue }: FieldProps) => {
+export const uiMapper = ({ field, fieldValue }: FieldProps) => {
   const uiWidgetMapper: Record<WidgetType, React.ReactNode> = {
     [WidgetType.PHONE]: <PhoneWidget {...field} />,
     [WidgetType.TEXT]: <PrimitiveInput field={field} type="text" />,

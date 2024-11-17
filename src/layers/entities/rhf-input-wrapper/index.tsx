@@ -1,7 +1,7 @@
 import { useFormContext } from "react-hook-form";
 import { Field } from "~/app/api/get-schema/get-json-schema";
 import { FormField } from "~/layers/shared/components/ui/form";
-import { useUIMapper } from "~/layers/shared/hooks/use-ui-mapper/facade";
+import { uiMapper } from "~/layers/shared/hooks/use-ui-mapper/facade";
 import ReactHookFormInputElement from "../rhf-input-element/facade";
 
 interface RHFInputProps {
@@ -18,7 +18,7 @@ export const RHFInput: React.FC<RHFInputProps> = ({ fieldValue }) => {
       control={control}
       defaultValue={defaultValue || ""}
       render={({ field }) => {
-        const { uiElement } = useUIMapper({ field, fieldValue });
+        const { uiElement } = uiMapper({ field, fieldValue });
         return (
           <ReactHookFormInputElement
             fieldValue={fieldValue}
