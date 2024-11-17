@@ -2,18 +2,17 @@ import { NextResponse } from "next/server";
 import { transformSchema } from "~/app/api/get-schema/data-manipulation";
 
 export async function GET() {
-  const REGISTRATION_TENANT_ID = "63328b33-67f0-4037-ade2-473ea69617b1";
+  const REGISTRATION_TENANT_ID = process.env.REGISTRATION_TENANT_ID;
+  const SCHEMA_ORIGIN_URL = process.env.SCHEMA_ORIGIN_URL;
+
   try {
-    const response = await fetch(
-      "https://registration.mamabet.cd/v1/schema/client",
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          "X-Tenant-Id": `${REGISTRATION_TENANT_ID}`,
-        },
-      }
-    );
+    const response = await fetch(`${SCHEMA_ORIGIN_URL}/v1/schema/client`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Tenant-Id": `${REGISTRATION_TENANT_ID}`,
+      },
+    });
     const data = await response.json();
     const transformedData = transformSchema(data);
 

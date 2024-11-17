@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { Field } from "../../types";
 import { applySharedSchema } from "../shared-schema-types";
+import { Field } from "~/layers/shared/types";
 
 export const numberSchema = (field: Field) => {
   const schema = z.number();

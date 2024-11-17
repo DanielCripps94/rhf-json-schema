@@ -5,8 +5,8 @@ import {
 import {
   GET_JSON_SCHEMA,
   getJsonSchema,
-  JsonSchema,
 } from "~/app/api/get-schema/get-json-schema";
+import { JsonSchema } from "~/layers/shared/types";
 
 export const useGetJsonSchemaQuery = (): UseSuspenseQueryResult<
   JsonSchema,

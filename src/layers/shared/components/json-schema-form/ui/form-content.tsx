@@ -1,5 +1,5 @@
-import { Field } from "~/app/api/get-schema/get-json-schema";
 import { RHFInput } from "~/layers/entities/rhf-input-wrapper";
+import { Field } from "~/layers/shared/types";
 
 interface RJSFFormContentProps {
   fields: Field[];

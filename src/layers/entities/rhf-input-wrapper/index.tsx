@@ -1,8 +1,8 @@
 import { useFormContext } from "react-hook-form";
-import { Field } from "~/app/api/get-schema/get-json-schema";
 import { FormField } from "~/layers/shared/components/ui/form";
 import { uiMapper } from "~/layers/shared/hooks/use-ui-mapper/facade";
 import ReactHookFormInputElement from "../rhf-input-element/facade";
+import { Field } from "~/layers/shared/types";
 
 interface RHFInputProps {
   fieldValue: Field;

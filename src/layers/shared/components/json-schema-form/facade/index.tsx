@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form } from "~/layers/shared/components/ui/form";
 import { useZodSchema } from "~/layers/shared/hooks/use-get-validation";
-import { Field, JsonSchema } from "~/app/api/get-schema/get-json-schema";
+import { Field, JsonSchema } from "~/layers/shared/types";
 import { RJSFFormContent } from "../ui/form-content";
 
 interface RHFJsonComponentProps {

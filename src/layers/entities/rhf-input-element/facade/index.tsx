@@ -1,9 +1,9 @@
-import { Field } from "~/app/api/get-schema/get-json-schema";
 import {
   FormItem,
   FormLabel,
   FormMessage,
 } from "~/layers/shared/components/ui/form";
+import { Field } from "~/layers/shared/types";
 
 interface ReactHookFormInputElementProps {
   fieldValue: Field;

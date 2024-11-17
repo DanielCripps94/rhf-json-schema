@@ -5,8 +5,8 @@ import {
   numberSchema,
   booleanSchema,
 } from "../type-schemas/primitive-shcema-types";
-import { Field, FieldType } from "../types";
-import { JsonSchema } from "~/app/api/get-schema/get-json-schema";
+import { Field, FieldType } from "../../../types";
+import { JsonSchema } from "~/layers/shared/types";
 
 const createZodSchemaFromJSON = (jsonSchema: JsonSchema) => {
   const fieldSchemas: Record<string, z.ZodTypeAny> = {};

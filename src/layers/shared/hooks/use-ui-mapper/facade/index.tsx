@@ -1,7 +1,7 @@
 import { ControllerRenderProps, FieldValues } from "react-hook-form";
 import PhoneWidget from "../widget-elements/phone-input";
-import { Field } from "~/app/api/get-schema/get-json-schema";
 import { PrimitiveInput } from "../widget-elements/primitive-input";
+import { Field } from "~/layers/shared/types";
 
 export enum WidgetType {
   PHONE = "phone",
