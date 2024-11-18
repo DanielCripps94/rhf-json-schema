@@ -21,13 +21,13 @@ export const RHFJsonComponent: React.FC<RHFJsonComponentProps> = ({
   submitElement,
 }) => {
   const { schema: zodValidation } = useZodSchema(schema);
-  console.log(schema);
 
   const formMethods = useForm({
     resolver: zodResolver(zodValidation),
   });
 
-  const { register, setValue, handleSubmit } = formMethods;
+  const { register, setValue, handleSubmit, watch } = formMethods;
+  console.log(watch(), "formValues");
 
   useEffect(() => {
     fields.forEach((field: Field) => {
